@@ -173,30 +173,12 @@ function getWeather(city) {
           generateForecastChart(forecastList);
           // console.log(`Setting current city data to default values:`, worldCityData.currentCityData);
           // document.getElementById("current-city-name").innerHTML = cityName;ˇ
-          async function displayWeatherData(city) {
-            try {
-              const weatherData = await getWeatherData(city);
-              console.log(weatherData);
-              const cityName = weatherData.name;
-              const countryCode = weatherData.sys.country;
-              console.log(cityName);
           
-              // Get current date and time in the given city's timezone
-              const timezone = weatherData.timezone / 3600;
-              const now = new Date().toLocaleString("en-US", { timeZone: `Etc/GMT${timezone}` });
-              const date = new Intl.DateTimeFormat("en-US", { dateStyle: "medium", timeZone: `Etc/GMT${timezone}` }).format(now);
-              const time = new Intl.DateTimeFormat("en-US", { timeStyle: "short", timeZone: `Etc/GMT${timezone}` }).format(now);
-          
-              document.getElementById("date-month").innerHTML = date;
-              document.getElementById("date-hour").innerHTML = time;
-              
-              // Other code to display weather data ...
-                 
           console.log(cityName)
-          // const now = new Date();
-          // const date = now.toLocaleDateString();
-          // const hour = now.getHours();
-          // const minute = now.getMinutes();
+          const now = new Date();
+          const date = now.toLocaleDateString();
+          const hour = now.getHours();
+          const minute = now.getMinutes();
           console.log(`${date} ${hour}:${minute}`);
           document.getElementById("date-month").innerHTML = date;
           document.getElementById("date-hour").innerHTML =  `${hour}:${minute}`;
@@ -215,11 +197,6 @@ function getWeather(city) {
           const iconContainer = document.getElementById("icon-container");
           const icon  = getWeatherIcon(currentForecast);
           iconContainer.innerHTML = icon;
-            } catch (error) {
-              console.log(error);
-            }
-          }
-        
         }
       })
       .catch(error => console.log(error));
