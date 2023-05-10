@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Weather App</title>
+	<link rel="stylesheet" href="style.css">
+	 
+</head>
+<body>
+	<h1>Weather App</h1>
+
+	<div>
+		<label for="city">City:</label>
+		<input type="text" id="city" placeholder="Enter city name">
+		<button onclick="getWeather()">Get Weather</button>
+	</div>
+
+	<div>
+		<p>Current Temperature: <span id="temperature"></span></p>
+		<p>City: <span id="city-name"></span></p>
+		<p>Forecast: <span id="forecast"></span></p>
+		<p>Humidity: <span id="humidity"></span></p>
+		<p>Probability of Rain: <span id="rain"></span></p>
+	</div>
+    <!--   -->
+	<script src="index.js"></script>
+</body>
+</html>

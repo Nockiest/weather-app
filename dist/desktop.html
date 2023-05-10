@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./fontawesome-free-5.15.3-web/css/all.min.css" />
+ 
+</head>
+<body>
+   
+     <div class="upper-container">
+        <div class="forecast-container">
+            <div class="forecast-input">
+                    <div>
+                    <label for="city">City:</label>
+                    <input type="text" id="city" placeholder="Enter city name" />
+                    </div>    
+                    <button onclick="getWeather(document.getElementById('city').value)"><i class="fas fa-plus"></i>New Forecast</button>
+            </div>
+        </div> 
+
+        <div class="current-weather">
+            <div class="current-weather-contents">
+                <div class="current-weather-title"ˇid="current-city-name">Current Weather Conditions</div>
+                <div class="current-weather-middle">
+                    <p class="current-weather-temperature temperature">21.1</p>
+                    <div id="icon-container">
+                        XXX
+                        <!-- <i class="fa fa-sun"></i> -->
+                    </div>
+                    <div class="date">
+                        <p class="centered-text date-month" id="date-month">XX:YY</p>
+                        <p class="centered-text date-hour"  id="date-hour">XX:YY</p>
+                    </div>
+                </div>
+                <div class="current-weather-bottom">
+                    <div class="current-weather-bottom-contents">
+                        <div class="labels">
+                            <div class="temperature">Temperature:</div>
+                            <div class="humidity">Humidity:</div>
+                            <div class="rain-probability">Rain Probability:</div>
+                            <div class="forecast">Forecast:</div>
+                        </div>
+                        <div class="values">
+                            <div class="temperature-value" id="current-temperature">XX.X</div>
+                            <div class="humidity-value" id="current-humidity">XX%</div>
+                            <div class="rain-probability-value" id="current-rain">XX%</div>
+                            <div class="forecast-value" id="current-forecast">XXXXXX</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="week-forecast">
+            <div class="week-forecast-label">Forecast</div>
+            <div id="week-forecast-chart">
+                <div class="chart-element 1">
+                    <div class="body-text chart-day">XX</div>
+                    <div class="chart-bar"></div>
+                    <div class="body-text chart-temperature">XX</div>
+                </div>
+                <div class="chart-element 2">
+                    <div class="body-text chart-day">XX</div>
+                    <div class="chart-bar"></div>
+                    <div class="body-text chart-temperature">XX</div>
+                </div>
+                <div class="chart-element 3">
+                    <div class="body-text chart-day">XX</div>
+                    <div class="chart-bar"></div>
+                    <div class="body-text chart-temperature">XX</div>
+                </div>
+                <div class="chart-element 4">
+                    <div class="body-text chart-day">XX</div>
+                    <div class="chart-bar"></div>
+                    <div class="body-text chart-temperature">XX</div>
+                </div>
+                <div class="chart-element 5">
+                    <div class="body-text chart-day">XX</div>
+                    <div class="chart-bar"></div>
+                    <div class="body-text chart-temperature">XX</div>
+                </div>
+                <div class="chart-element 6">
+                    <div class="body-text chart-day">XX</div>
+                    <div class="chart-bar"></div>
+                    <div class="body-text chart-temperature">XX</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="lower-container"></div> 
+
+    <script   src="index.js"></script>
+    <script src="https://kit.fontawesome.com/25b994d960.js" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+<!-- <div class="current-weather">
+            <div class="current-weather-contents">
+                <div class="current-weather-title">City Name</div>
+                <div class="current-weather-middle">
+                    <p class="current-weather-temperature">21.1</p>
+                    <img src="example.jpg" alt="Weatherimg" class="weather-image">
+                    <div class="date">
+                        <p class="centered-text date-month">XX:YY</p>
+                        <p class="centered-text date-hour">XX:YY</p>
+                    </div>
+                </div>
+                <div class="current-weather-bottom">
+                    <div class="current-weather-bottom-contents">
+                        <div class="labels">
+                            <div class="temperature">Temperature:</div>
+                            <div class="humidity">Humidity:</div>
+                            <div class="rain-probability">Rain Probability:</div>
+                            <div class="forecast">Forecast:</div>
+                        </div>
+                        <div class="values">
+                            <div class="temperature-value">XX.X</div>
+                            <div class="humidity-value">XX%</div>
+                            <div class="rain-probability-value">XX%</div>
+                            <div class="forecast-value">XXXXXX</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="current-weather">
+            <div class="current-weather-contents">
+                <div class="current-weather-title">City Name</div>
+                <div class="current-weather-middle">
+                    <p class="current-weather-temperature">21.1</p>
+                    <img src="example.jpg" alt="Weatherimg" class="weather-image">
+                    <div class="date">
+                        <p class="centered-text date-month">XX:YY</p>
+                        <p class="centered-text date-hour">XX:YY</p>
+                    </div>
+                </div>
+                <div class="current-weather-bottom">
+                    <div class="current-weather-bottom-contents">
+                        <div class="labels">
+                            <div class="temperature">Temperature:</div>
+                            <div class="humidity">Humidity:</div>
+                            <div class="rain-probability">Rain Probability:</div>
+                            <div class="forecast">Forecast:</div>
+                        </div>
+                        <div class="values">
+                            <div class="temperature-value">XX.X</div>
+                            <div class="humidity-value">XX%</div>
+                            <div class="rain-probability-value">XX%</div>
+                            <div class="forecast-value">XXXXXX</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="current-weather">
+        <div class="current-weather-contents">
+            <div class="current-weather-title">City Name</div>
+            <div class="current-weather-middle">
+                <p class="current-weather-temperature">21.1</p>
+                <img src="example.jpg" alt="Weatherimg" class="weather-image">
+                <div class="date">
+                    <p class="centered-text date-month">XX:YY</p>
+                    <p class="centered-text date-hour">XX:YY</p>
+                </div>
+            </div>
+            <div class="current-weather-bottom">
+                <div class="current-weather-bottom-contents">
+                    <div class="labels">
+                        <div class="temperature">Temperature:</div>
+                        <div class="humidity">Humidity:</div>
+                        <div class="rain-probability">Rain Probability:</div>
+                        <div class="forecast">Forecast:</div>
+                    </div>
+                    <div class="values">
+                        <div class="temperature-value">XX.X</div>
+                        <div class="humidity-value">XX%</div>
+                        <div class="rain-probability-value">XX%</div>
+                        <div class="forecast-value">XXXXXX</div>
+                        <div class="city-name">XXXXXX</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="current-weather">
+        <div class="current-weather-contents">
+            <div class="current-weather-title">Current Weather Conditions</div>
+            <div class="current-weather-middle">
+                <p class="current-weather-temperature">21.1</p>
+                <img src="example.jpg" alt="Weatherimg" class="weather-image">
+                <div class="date">
+                    <p class="centered-text date-month">XX:YY</p>
+                    <p class="centered-text date-hour">XX:YY</p>
+                </div>
+            </div>
+            <div class="current-weather-bottom">
+                <div class="current-weather-bottom-contents">
+                    <div class="labels">
+                        <div class="temperature">Temperature:</div>
+                        <div class="humidity">Humidity:</div>
+                        <div class="rain-probability">Rain Probability:</div>
+                        <div class="forecast">Forecast:</div>
+                    </div>
+                    <div class="values">
+                        <div class="temperature-value">XX.X</div>
+                        <div class="humidity-value">XX%</div>
+                        <div class="rain-probability-value">XX%</div>
+                        <div class="forecast-value">XXXXXX</div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+      </div>-->
